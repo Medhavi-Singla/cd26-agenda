@@ -433,13 +433,24 @@
     /* SESSION ROW */
 
     .session-row{
-      display:grid;
-      grid-template-columns:150px 1fr 300px;
-      gap:25px;
-      padding:30px 35px;
-      border-bottom:1px solid #e7edf5;
-      align-items:flex-start;
-    }
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr) 300px;
+  gap:25px;
+  padding:30px 35px;
+  border-bottom:1px solid #e7edf5;
+  align-items:center;
+}
+
+.session-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.speaker-box{
+  height:100%;
+  box-sizing:border-box;
+}
 
     .session-row:last-child{
       border-bottom:none;
