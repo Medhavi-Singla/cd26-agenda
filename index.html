@@ -10,23 +10,224 @@
 
   <style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+@media print {
 
-    body{
-      font-family:'Inter', sans-serif;
-      background:#f4f6fb;
-      color:#111827;
-      line-height:1.6;
-    }
+  @page{
+    size:A4;
+    margin:14mm;
+  }
 
-    a{
-      text-decoration:none;
-    }
+  *{
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+  }
 
+  body{
+    background:#ffffff !important;
+    color:#111827;
+    font-size:12px;
+    line-height:1.45;
+  }
+
+  .hero{
+    padding:40px 25px 35px;
+    background:#07152d !important;
+    color:#fff !important;
+  }
+
+  .hero h1{
+    font-size:34px;
+    line-height:1.15;
+    margin-bottom:18px;
+  }
+
+  .hero p{
+    font-size:14px;
+    color:#dbe6f3 !important;
+  }
+
+  .eyebrow{
+    background:#17345f !important;
+    border:1px solid #35527d;
+    color:#fff !important;
+  }
+
+  .hero-buttons,
+  .footer{
+    display:none !important;
+  }
+
+  .top-meta{
+    gap:12px;
+    margin-top:28px;
+  }
+
+  .meta-card{
+    background:#17345f !important;
+    border:1px solid #2f4c78;
+    padding:14px 16px;
+    min-width:220px;
+  }
+
+  .meta-card h4{
+    color:#d8e5f5 !important;
+    font-size:11px;
+  }
+
+  .meta-card p{
+    color:#fff !important;
+    font-size:13px;
+  }
+
+  .timezone-bar{
+    background:#dce7f5 !important;
+    color:#07152d !important;
+    font-size:12px;
+    padding:12px;
+  }
+
+  .agenda-section{
+    padding:35px 0 20px;
+  }
+
+  .section-title{
+    margin-bottom:30px;
+  }
+
+  .section-title h2{
+    font-size:28px;
+    margin-bottom:10px;
+  }
+
+  .section-title p{
+    font-size:13px;
+    color:#4b5563;
+  }
+
+  .agenda-block{
+    margin-bottom:28px;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid #d9e3ef;
+    box-shadow:none !important;
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+
+  .block-header{
+    background:#07152d !important;
+    color:#fff !important;
+    padding:18px 24px;
+  }
+
+  .block-header h3{
+    font-size:24px;
+    margin-bottom:4px;
+  }
+
+  .block-header p{
+    font-size:12px;
+    color:#dbe5f2 !important;
+  }
+
+  .table-heading{
+    background:#e8eef7 !important;
+    color:#07152d !important;
+    padding:14px 22px;
+    font-size:12px;
+    font-weight:800;
+    grid-template-columns:110px 1fr 240px;
+  }
+
+  .session-row{
+    grid-template-columns:110px 1fr 240px;
+    gap:18px;
+    padding:18px 22px;
+    border-bottom:1px solid #e4eaf2;
+    align-items:flex-start;
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+
+  .session-time{
+    font-size:13px;
+    font-weight:700;
+    color:#0d2a52;
+  }
+
+  .session-content h4{
+    font-size:17px;
+    line-height:1.3;
+    margin-bottom:7px;
+    color:#07152d;
+  }
+
+  .session-content p{
+    font-size:12px;
+    color:#475569;
+  }
+
+  .session-duration{
+    margin-top:8px;
+    font-size:11px;
+    color:#7b8794;
+  }
+
+  .speaker-box{
+    background:#f3f6fb !important;
+    border:1px solid #dce5f1;
+    border-radius:12px;
+    padding:10px;
+    gap:10px;
+  }
+
+  .speaker-box img{
+    width:52px;
+    height:52px;
+  }
+
+  .speaker-info h5{
+    font-size:13px;
+    margin-bottom:2px;
+  }
+
+  .speaker-info span{
+    font-size:11px;
+    line-height:1.35;
+  }
+
+  .speaker-role{
+    font-size:9px;
+    padding:3px 8px;
+    margin-bottom:5px;
+  }
+
+  .poll-row{
+    background:#f7f2e7 !important;
+    border-top:1px solid #eadfc8;
+    border-bottom:1px solid #eadfc8;
+    padding:12px 20px;
+  }
+
+  .poll-content{
+    font-size:12px;
+    color:#7a5a1e !important;
+  }
+
+  .break-row{
+    background:#eef3f9 !important;
+    color:#0d2a52 !important;
+    padding:12px;
+    font-size:12px;
+    font-weight:700;
+  }
+
+  a{
+    color:inherit !important;
+    text-decoration:none !important;
+  }
+
+}
     /* HERO */
 
     .hero{
@@ -122,6 +323,32 @@
       background:#b69454;
       transform:translateY(-2px);
     }
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:38px;
+}
+
+.secondary-btn{
+  background:#c8a96b;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  padding:16px 34px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:15px;
+  transition:.3s ease;
+  font-family:'Inter', sans-serif;
+}
+
+.secondary-btn:hover{
+  background:#b69454;
+  transform:translateY(-2px);
+}
 
     /* TIMEZONE BAR */
 
@@ -236,6 +463,21 @@
       color:#4e5968;
     }
 
+.session-duration{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  font-size:14px;
+  color:#8a8f98;
+  font-weight:500;
+}
+
+.session-duration::before{
+  content:"🕒";
+  font-size:13px;
+}
+
     /* SPEAKER */
 
     .speaker-box{
@@ -266,6 +508,19 @@
       color:#64748b;
       line-height:1.5;
     }
+
+.speaker-role{
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  background:#dbe7f5;
+  color:#0d2a52;
+  padding:4px 10px;
+  border-radius:30px;
+  margin-bottom:8px;
+}
 
     /* POLL ROW */
 
@@ -430,11 +685,18 @@
 
       </div>
 
-      <a href="#" class="hero-btn">
-        Register Now
-      </a>
+<div class="hero-buttons">
 
-    </div>
+<a href="https://events.culytics.com/culytics-day-2026#/tickets?lang=en" class="hero-btn" style="text-decoration:none !important;">
+    Register Now
+  </a>
+
+  <button onclick="downloadPDF()" class="hero-btn secondary-btn">
+    Download Agenda
+
+  </button>
+
+</div>
 
   </section>
 
@@ -476,19 +738,22 @@
       <div class="session-row">
 
         <div class="session-time">
-          8:00 AM
-        </div>
+  8:00 AM
+</div>
 
         <div class="session-content">
           <h4>Welcome and Program Overview</h4>
           <p>
-            Program framing and introduction to the day's theme focused on the AI-augmented practitioner ecosystem.
+            Program framing and introduction to the day's theme. Context: the focus of CD26 is the practitioner and their professional ecosystem -- not the work itself.
           </p>
+<div class="session-duration">
+  10 minutes
+</div>
         </div>
 
         <div class="speaker-box">
 
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Speaker">
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/12212918695?profile=RESIZE_400x" alt="Naveen Jain">
 
           <div class="speaker-info">
             <h5>Naveen Jain</h5>
@@ -520,13 +785,16 @@
         </div>
 
         <div class="session-content">
-          <h4>The BI Professional in an AI-Native World</h4>
+          <h4>The BI Professional in an AI-Native World: From Dashboard Builder to Decision Architect</h4>
           <p>
-            What does the AI-augmented data professional actually look like? Exploring the future role of analytics teams and practitioners.
+            What does the AI-augmented data and analytics professional actually look like? An opening keynote anchored in the convergence of analytics and AI -- and what it means for the practitioner's role, value, and career trajectory.
           </p>
+<div class="session-duration">
+  30 minutes
+</div>
         </div>
 
-        <div class="speaker-box">
+        <!--div class="speaker-box">
 
           <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Speaker">
 
@@ -535,10 +803,45 @@
             <span>Keynote Speaker</span>
             <span>To Be Announced</span>
           </div>
+</div-->
 
         </div>
 
-      </div>
+      <!-- SESSION -->
+
+      <div class="session-row">
+
+        <div class="session-time">
+          8:45 AM
+        </div>
+
+        <div class="session-content">
+          <h4>Platinum Sponsor Fireside Chat</h4>
+          <p>
+            A practitioner-focused conversation with a Platinum sponsor. What skills and mindset shifts are needed to derive full value from AI-enabled solutions -- and how does the analyst's role evolve alongside them?
+          </p>
+<div class="session-duration">
+  15 minutes
+        </div>
+</div>
+
+        <div class="speaker-box">
+
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/8755749477?profile=RESIZE_584x" alt="Speaker">
+
+          <div class="speaker-info">
+
+ <div class="speaker-role">
+    MODERATOR
+  </div>
+            <h5>Jon Deutsch</h5>
+            <span>Advisor</span>
+            <span>CULytics</span>
+          </div>
+
+        </div>
+
+</div>      
 
       <!-- SESSION -->
 
@@ -549,13 +852,16 @@
         </div>
 
         <div class="session-content">
-          <h4>What CU Leaders Are Actually Telling Their Teams About AI and Jobs</h4>
+          <h4>Honest Conversations: What CU Leaders Are Actually Telling Their Teams About AI and Jobs</h4>
           <p>
-            Honest conversations around workforce implications, leadership communication, and organizational AI readiness.
+            A senior CU leader panel on the organizational message to staff about AI and their roles. Candor over polish. What is being said -- and what is being left unsaid -- about the workforce implications of AI in the credit union?
           </p>
+<div class="session-duration">
+  35 minutes
+        </div>
         </div>
 
-        <div class="speaker-box">
+        <!--div class="speaker-box">
 
           <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Speaker">
 
@@ -565,9 +871,14 @@
             <span>Credit Union Executives</span>
           </div>
 
-        </div>
+        </div-->
 
       </div>
+
+
+
+
+
 
       <div class="break-row">
         Break • 9:35 – 9:45 AM PT
@@ -594,21 +905,51 @@
 
       <div class="poll-row">
 
-        <div class="poll-time">
-          9:45 AM
-        </div>
-
-        <div class="poll-text">
-          Community Poll — What is your biggest obstacle to moving AI forward at your credit union?
-        </div>
-
-        <div class="poll-tag">
-          Community Poll
-        </div>
+         <div class="poll-content">
+    <span>9:45 AM •</span>
+    Community Poll — What is your biggest obstacle to moving AI forward at your credit union?
+  </div>
 
       </div>
 
-      <!-- SESSION -->
+<!-- SESSION -->
+
+      <div class="session-row">
+
+        <div class="session-time">
+          9:50 AM
+        </div>
+
+        <div class="session-content">
+          <h4>Platinum Sponsor Fireside Chat</h4>
+          <p>
+            A practitioner-focused conversation with a Platinum sponsor. How are leading solution providers helping CU data and analytics teams build the skills, tools, and approaches needed for the AI-augmented era?
+          </p>
+<div class="session-duration">
+  15 minutes
+        </div>
+</div>
+
+        <div class="speaker-box">
+
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/8755749477?profile=RESIZE_584x" alt="Speaker">
+
+          <div class="speaker-info">
+
+ <div class="speaker-role">
+    MODERATOR
+  </div>
+            <h5>Jon Deutsch</h5>
+            <span>Advisor</span>
+            <span>CULytics</span>
+          </div>
+
+        </div>
+
+</div>      
+
+
+            <!-- SESSION -->
 
       <div class="session-row">
 
@@ -617,26 +958,60 @@
         </div>
 
         <div class="session-content">
+
           <h4>Who Decides? Decision Rights, Decision Velocity, and the AI-Enabled CU</h4>
+
           <p>
-            A moderated practitioner discussion around organizational ownership, decision velocity, and operational readiness for AI.
+            AI accelerates decision-making -- but only for organizations that have defined who makes the decisions. A moderated discussion on the two prerequisites for AI to deliver in a credit union: decision rights (who owns the decision) and decision velocity (how the feedback loop closes). 
           </p>
-        </div>
 
-        <div class="speaker-box">
-
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Speaker">
-
-          <div class="speaker-info">
-            <h5>Su Rayburn</h5>
-            <span>Delta Community CU</span>
-            <span>Analytics Leader</span>
+          <div class="session-duration">
+            40 minutes
           </div>
 
         </div>
 
-      </div>
+        <div class="speaker-column">
 
+          <div class="speaker-box">
+
+            <img src="https://storage.ning.com/topology/rest/1.0/file/get/31151484494?profile=RESIZE_930x" alt="Su Rayburn">
+
+            <div class="speaker-info">
+
+              <div class="speaker-role">
+                SPEAKER
+              </div>
+
+              <h5>Su Rayburn</h5>
+
+              <span>Vice President, Information Management & Analytics</span>
+              <span>Delta Community Credit Union</span>
+
+            </div>
+
+          </div>
+
+          <div class="speaker-box">
+
+            <img src="https://storage.ning.com/topology/rest/1.0/file/get/31151487255?profile=RESIZE_930x" alt="Nick Kelly">
+
+            <div class="speaker-info">
+
+              <div class="speaker-role">
+                SPEAKER
+              </div>
+
+              <h5>Nick Kelly</h5>
+
+              <span>Co-Founder & Chief AI Architect</span>
+              <span>Delivering Data Analytics</span>
+
+            </div>
+
+          </div>
+</div>
+</div>
       <!-- SESSION -->
 
       <div class="session-row">
@@ -646,13 +1021,16 @@
         </div>
 
         <div class="session-content">
-          <h4>The Minimum Viable AI Foundation</h4>
+          <h4>The Minimum Viable AI Foundation: What a Resource-Constrained CU Needs Before It Can Scale Anything</h4>
           <p>
-            What a resource-constrained credit union must have in place before implementing and scaling AI initiatives.
+            A sequencing-focused session for CUs at every asset size. What must be in place -- strategically, technically, and operationally -- before any AI initiative can be implemented, much less scaled? Prerequisite thinking over aspirational roadmaps.
           </p>
+ <div class="session-duration">
+            20 minutes
+          </div>
         </div>
 
-        <div class="speaker-box">
+        <!--div class="speaker-box">
 
           <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Speaker">
 
@@ -662,9 +1040,45 @@
             <span>To Be Announced</span>
           </div>
 
-        </div>
+        </div-->
 
       </div>
+
+<!-- SESSION -->
+
+      <div class="session-row">
+
+        <div class="session-time">
+          11:05 AM
+        </div>
+
+        <div class="session-content">
+          <h4>Gold Sponsor Fireside Chat</h4>
+          <p>
+            A practitioner-focused conversation with a Gold sponsor.
+          </p>
+<div class="session-duration">
+  10 minutes
+        </div>
+</div>
+
+        <div class="speaker-box">
+
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/8755749477?profile=RESIZE_584x" alt="Speaker">
+
+          <div class="speaker-info">
+
+ <div class="speaker-role">
+    MODERATOR
+  </div>
+            <h5>Jon Deutsch</h5>
+            <span>Advisor</span>
+            <span>CULytics</span>
+          </div>
+
+        </div>
+
+</div>     
 
       <div class="break-row">
         Break • 11:15 – 11:25 AM PT
@@ -689,21 +1103,52 @@
 
       <!-- POLL -->
 
-      <div class="poll-row">
+     <div class="poll-row">
 
-        <div class="poll-time">
-          11:25 AM
-        </div>
-
-        <div class="poll-text">
-          Community Poll — What aspect of the AI-augmented professional role concerns or excites you most?
-        </div>
-
-        <div class="poll-tag">
-          Community Poll
-        </div>
+         <div class="poll-content">
+    <span>11:25 AM •</span>
+    Community Poll — What aspect of the AI-augmented professional role concerns or excites you most?
+  </div>
 
       </div>
+
+
+<!-- SESSION -->
+
+      <div class="session-row">
+
+        <div class="session-time">
+          11:30 AM
+        </div>
+
+        <div class="session-content">
+          <h4>Gold Sponsor Fireside Chat</h4>
+          <p>
+            A practitioner-focused conversation with a Gold sponsor.
+          </p>
+<div class="session-duration">
+  10 minutes
+        </div>
+</div>
+
+        <div class="speaker-box">
+
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/8755749477?profile=RESIZE_584x" alt="Speaker">
+
+          <div class="speaker-info">
+
+ <div class="speaker-role">
+    MODERATOR
+  </div>
+            <h5>Jon Deutsch</h5>
+            <span>Advisor</span>
+            <span>CULytics</span>
+          </div>
+
+        </div>
+
+</div>     
+
 
       <!-- SESSION -->
 
@@ -714,13 +1159,17 @@
         </div>
 
         <div class="session-content">
-          <h4>What the AI-Augmented Analytics Transition Actually Looks Like</h4>
+          <h4>What the AI-Augmented Analytics Transition Actually Looks Like -- A View from Adjacent Industries</h4>
           <p>
-            Lessons from adjacent industries navigating the transition toward AI-assisted analytics and decision orchestration.
+            CUs are not the first organizations to navigate the shift from an analytics team to one that orchestrates AI-assisted workflows. A senior data/analytics leader from an adjacent industry shares what that transition looked like from the inside: roles redefined, skill frameworks rebuilt, career paths redesigned -- and what the practitioners who thrived had in common.
           </p>
+
+<div class="session-duration">
+ 25 minutes
+    </div>
         </div>
 
-        <div class="speaker-box">
+        <!--div class="speaker-box">
 
           <img src="https://randomuser.me/api/portraits/men/24.jpg" alt="Speaker">
 
@@ -730,7 +1179,7 @@
             <span>Guest Speaker</span>
           </div>
 
-        </div>
+        </div-->
 
       </div>
 
@@ -743,13 +1192,16 @@
         </div>
 
         <div class="session-content">
-          <h4>The AI-Augmented Analytics Team</h4>
+          <h4>The AI-Augmented Analytics Team: What Skills Survive and What New Skills Are Opening Up?</h4>
           <p>
-            Which skills survive, evolve, and emerge as AI reshapes analytics team structures and practitioner expectations.
+            A career-facing practitioner panel. What skills must be acquired, retained, and developed now? What roles may evolve or be absorbed by automation over time? Forward-looking and constructive -- not a scare-tactic narrative.
           </p>
+<div class="session-duration">
+ 40 minutes
+    </div>
         </div>
 
-        <div class="speaker-box">
+        <!--div class="speaker-box">
 
           <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Speaker">
 
@@ -759,9 +1211,87 @@
             <span>Panel Discussion</span>
           </div>
 
-        </div>
+        </div-->
 
       </div>
+
+<!-- SESSION -->
+
+      <div class="session-row">
+
+        <div class="session-time">
+          12:45 PM
+        </div>
+
+        <div class="session-content">
+          <h4>Gold Sponsor Fireside Chat</h4>
+          <p>
+            A practitioner-focused conversation with a Gold sponsor.
+          </p>
+<div class="session-duration">
+  10 minutes
+        </div>
+</div>
+
+        <div class="speaker-box">
+
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/8755749477?profile=RESIZE_584x" alt="Speaker">
+
+          <div class="speaker-info">
+
+ <div class="speaker-role">
+    MODERATOR
+  </div>
+            <h5>Jon Deutsch</h5>
+            <span>Advisor</span>
+            <span>CULytics</span>
+          </div>
+
+        </div>
+
+</div>  
+
+<div class="break-row">
+        Break • 12:55 – 1:05 PM PT
+      </div>
+
+<!-- SESSION -->
+
+      <div class="session-row">
+
+        <div class="session-time">
+          1:05 PM
+        </div>
+
+        <div class="session-content">
+          <h4>Credit Union Case Study</h4>
+          <p>
+            A Platinum sponsor presents a credit union customer case study aligned to the CD26 theme. The CU practitioner is the primary voice. Content addresses practitioner preparation, skill development, organizational readiness, and measurable outcomes.
+          </p>
+<div class="session-duration">
+ 20 minutes
+    </div>
+        </div>
+
+        <div class="speaker-box">
+
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/8755749477?profile=RESIZE_584x" alt="Speaker">
+
+          <div class="speaker-info">
+
+ <div class="speaker-role">
+    MODERATOR
+  </div>
+            <h5>Jon Deutsch</h5>
+            <span>Advisor</span>
+            <span>CULytics</span>
+          </div>
+
+        </div>
+
+</div>  
+
+
 
       <!-- SESSION -->
 
@@ -772,13 +1302,16 @@
         </div>
 
         <div class="session-content">
-          <h4>Governing AI You Did Not Build</h4>
+          <h4>Governing AI You Did Not Build: Agentic Models, Vendor Solutions, and Third-Party Data</h4>
           <p>
-            Governance strategies for external AI systems, vendor models, third-party data pipelines, and agentic AI.
+            Governance of AI the CU did not build: vendor models, third-party data pipelines, and agentic AI systems. How do CUs ensure organizational accountability, member trust, and audit readiness when decisioning is embedded in external systems?
           </p>
+<div class="session-duration">
+ 25 minutes
+    </div>
         </div>
 
-        <div class="speaker-box">
+        <!--div class="speaker-box">
 
           <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Speaker">
 
@@ -788,7 +1321,7 @@
             <span>Credit Union Industry</span>
           </div>
 
-        </div>
+        </div-->
 
       </div>
 
@@ -803,13 +1336,16 @@
         <div class="session-content">
           <h4>Closing Synthesis and Community Remarks</h4>
           <p>
-            Key practitioner takeaways, community reflections, and a preview of upcoming CULytics initiatives.
+            Key themes from the day distilled into 3-5 practitioner takeaways. Thanks to speakers, sponsors, and the CULytics community. Upcoming programs and events.
           </p>
+<div class="session-duration">
+ 10 minutes
+    </div>
         </div>
 
         <div class="speaker-box">
 
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Speaker">
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/12212918695?profile=RESIZE_400x" alt="Speaker">
 
           <div class="speaker-info">
             <h5>Naveen Jain</h5>
@@ -837,11 +1373,20 @@
       Connect with credit union executives, analytics leaders, and innovators exploring the future of AI-enabled transformation.
     </p>
 
-    <a href="mailto:info@culytics.com" class="footer-btn">
+    <a href="mailto:info@culytics.com" class="footer-btn" style="text-decoration:none !important;">
       Contact Us
     </a>
 
   </section>
 
+<script>
+
+  function downloadPDF() {
+
+    window.print();
+
+  }
+
+</script>
 </body>
 </html>
