@@ -699,8 +699,9 @@
 <div class="hero-buttons">
 
 <a href="https://events.culytics.com/culytics-day-2026#/tickets?lang=en"
+   target="_blank"
+   rel="noopener noreferrer"
    class="hero-btn"
-   onclick="handleTopNavigation(event, this.href)"
    style="text-decoration:none !important;">
   Register Now
 </a>
@@ -1383,34 +1384,12 @@
     </p>
 
 <a href="mailto:info@culytics.com"
+   target="_blank"
+   rel="noopener noreferrer"
    class="footer-btn"
-   onclick="handleTopNavigation(event, this.href)"
    style="text-decoration:none !important;">
   Contact Us
 </a>
-
   </section>
-  <script>
-function handleTopNavigation(event, url) {
-
-  // Allow Ctrl+Click / Cmd+Click / middle-click to open new tab normally
-  if (
-    event.ctrlKey ||
-    event.metaKey ||
-    event.button === 1
-  ) {
-    return;
-  }
-
-  // Normal click opens outside iframe in same tab
-  event.preventDefault();
-
-  try {
-    window.top.location.href = url;
-  } catch (e) {
-    window.open(url, "_top");
-  }
-}
-</script>
 </body>
 </html>
