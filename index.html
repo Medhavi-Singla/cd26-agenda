@@ -698,9 +698,12 @@
 
 <div class="hero-buttons">
 
-<a href="https://events.culytics.com/culytics-day-2026#/tickets?lang=en" target="_top" class="hero-btn" style="text-decoration:none !important;">
-    Register Now
-  </a>
+<a href="https://events.culytics.com/culytics-day-2026#/tickets?lang=en"
+   class="hero-btn"
+   onclick="handleTopNavigation(event, this.href)"
+   style="text-decoration:none !important;">
+  Register Now
+</a>
 
 </div>
 
@@ -1379,10 +1382,35 @@
       Connect with credit union executives, analytics leaders, and innovators exploring the future of AI-enabled transformation.
     </p>
 
-    <a href="mailto:info@culytics.com" target="_top" class="footer-btn" style="text-decoration:none !important;">
-      Contact Us
-    </a>
+<a href="mailto:info@culytics.com"
+   class="footer-btn"
+   onclick="handleTopNavigation(event, this.href)"
+   style="text-decoration:none !important;">
+  Contact Us
+</a>
 
   </section>
+  <script>
+function handleTopNavigation(event, url) {
+
+  // Allow Ctrl+Click / Cmd+Click / middle-click to open new tab normally
+  if (
+    event.ctrlKey ||
+    event.metaKey ||
+    event.button === 1
+  ) {
+    return;
+  }
+
+  // Normal click opens outside iframe in same tab
+  event.preventDefault();
+
+  try {
+    window.top.location.href = url;
+  } catch (e) {
+    window.open(url, "_top");
+  }
+}
+</script>
 </body>
 </html>
